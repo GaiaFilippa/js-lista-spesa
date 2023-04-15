@@ -10,7 +10,23 @@
   </head>
 
   <body>
+    <header>
+        <div>
+            <h1 class="text-center">Lista della Spesa</h1>
+        </div>
+    </header>
 
+    <main>
+        <div class="input-group mb-3 justify-content-center list-container">
+            <form class="flex" onsubmit="listGeneration(event)">
+                <input type="text" class="form-control" placeholder="Aggiungi ingrediente..." id="itemInput">
+                <button class="btn btn-outline-warning" type="submit">Aggiungi</button>
+            </form>
+        </div>
+
+        <div id="container-for-list" class="flex justify-content-center"></div>
+
+    </main>
    
 
     <script src="./js/main.js"></script>

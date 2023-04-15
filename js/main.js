@@ -21,3 +21,26 @@ while(contatore < listaDellaSpesa.length){
     console.log((contatore+1) + ". " + listaDellaSpesa[contatore]);
     contatore++;
 }
+
+
+// Stampa in DOM
+
+function listGeneration(event){
+    event.preventDefault();
+
+    let userItem = document.getElementById('itemInput').value;
+
+    document.getElementById("container-for-list").innerHTML += `
+    <div class="flex border-bottom border-dark mt-3 mb-3 h-30 px-4">
+
+        <div class="me-2">
+            <p>${userItem}</p>
+        </div>
+    
+        <div>
+            <button class="border border-0 bg-white text-danger mb-3 fw-bold">X</button>
+        </div>
+
+    </div>
+    `;
+}
